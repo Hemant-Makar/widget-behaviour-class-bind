@@ -1,0 +1,8 @@
+.status {
+  float: left;
+  display: flex;
+}
+.value {
+  border: 1px solid;
+  padding: 10px;
+}
