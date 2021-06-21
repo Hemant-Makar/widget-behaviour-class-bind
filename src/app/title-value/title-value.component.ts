@@ -8,7 +8,7 @@ import { WidgetB } from '../widget-b';
   styleUrls: ['./title-value.component.css']
 })
 export class TitleValueComponent implements OnInit {
-  @Input() listner: string = 'b';
+  @Input() strategy: string = 'a';
   title = 'Title';
   value = 'Value';
 
@@ -16,7 +16,7 @@ export class TitleValueComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    const widget = new this.widgets[this.listner]();
+    const widget = new this.widgets[this.strategy]();
     widget.start((title, value) => {
       console.log(title, value);
       this.title = title;
